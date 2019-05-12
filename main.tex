@@ -1,0 +1,69 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{dirtytalk}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{import}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage[perpage]{footmisc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[subpreambles=true]{standalone}
+
+\pgfplotsset{compat=1.15}
+
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.1}
+
+\newcounter{exercise}[subsection]
+\newenvironment{exercise}{\refstepcounter{exercise}\par\medskip
+   \noindent \textbf{\thesubsection-\theexercise} \rmfamily}{\medskip}
+
+\title{Exercises, Introduction to Algorithms, Cormen, 2009}
+\author{Leonard Bruns}
+\date{May 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{The Role of Algorithms in Computing}
+
+\subsection{Algorithms}
+% Exercise 1.1-1
+\begin{exercise}
+    An example for a sorting algorithm would be a list of books that we want to sort in lexigraphic order. A real-world example for the convex hull might be the use of them in collision detection algorithms, in which they can be used as approximations of more complex shapes, to speed up the search for objects that are clearly not in collision.%
+\end{exercise}
+
+% Exercise 1.1-2
+\begin{exercise}
+    If the algorithm doesn't give the same solution all the time, the quality of the solution (i.e. cost of some sort) might be a good metric. Also the memory requirements of an algorithm might be relevant.%
+\end{exercise}
+
+% Exercise 1.1-3
+\begin{exercise}
+    A doubly linked list is a data structure that allows for slightly faster insertion of an element before or after any other element. Due to it being doubly linked it requires more memory than a singly linked list. Singly linked list are extremely slow when iterating the list in reverse, while for doubly linked lists its just as fast as iterating forward. Another disadvantage of doubly linked lists is the higher implementation complexity.%
+\end{exercise}
+
+% Exercise 1.1-4
+\begin{exercise}
+    Both shortest path and traveling-salesman problem depend on a graph structure and finding a certain shortest path in that graph structure. The difference is their constraints. For the shortest path only the start and end point are fixed. For the traveling-salesman every vertex in the graph has to be visited and the start and end goal must be the same.%
+\end{exercise}
+
+% Exercise 1.1-5
+\begin{exercise}
+    When doing a search in a library finding a book just with a similar ISBN might be completely wrong, thus a search algorithm is required that finds an exact solution. When this book in the library has been spotted we might use an algorithn to calculate the path to that book. Now while it would be nice if that path would be the shortest possible, it would not be a huge problem if the path is slightly suboptimal as long as we are still reaching the book before someone else takes it away from us.%
+\end{exercise}
+
+\subsection{Algorithms as a technology}
+
+
+
+
+\end{document}
